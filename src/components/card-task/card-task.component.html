@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-header">
+    <h5>{{ task.taskName }}</h5>
+    <button
+      class="delete-btn"
+      (click)="onDelete()"
+      matTooltip="{{ 'cardTask.deleteToolTip' | translate }}"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <div class="card_body">
+    <p class="card-text">{{ task.taskDescription }}</p>
+    <div class="button-group">
+      <button
+        *ngIf="moveToPrevious.observers.length > 0"
+        (click)="onMoveToPrevious()"
+        class="move-btn"
+        matTooltip="{{ 'cardTask.moveLeftToolTip' | translate }}"
+      >
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button
+        *ngIf="moveToNext.observers.length > 0"
+        (click)="onMoveToNext()"
+        class="move-btn move-right"
+        matTooltip="{{ 'cardTask.moveRightToolTip' | translate }}"
+      >
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

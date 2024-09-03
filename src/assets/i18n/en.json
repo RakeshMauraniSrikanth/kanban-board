@@ -1,0 +1,24 @@
+{
+    "landingPage": {
+        "title": "The best kanban board"        
+    },
+    "cardTask": {
+        "deleteToolTip": "Delete Task",
+        "moveRightToolTip": "Move right",
+        "moveLeftToolTip": "Move left"
+    },
+    "taskForm": {
+        "taskName": "Enter Title",
+        "taskDescription": "Enter description",
+        "createButton": "Create Task",
+        "errors": {
+      "required": "Field cannot be empty"
+    }
+    },
+    "taskStatusColumn": {
+        "toDo": "To Do",
+        "implementing": "Implementing",
+        "done": "Done",
+        "addTask": "Add Task"
+    }
+}

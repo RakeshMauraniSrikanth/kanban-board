@@ -1,0 +1,66 @@
+
+.card {
+    max-height: 25%;
+    position: relative;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: var(--color-light-grey);
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between; 
+    padding-left: 0.5rem;
+    background-color: var(--color-blue);
+    color:var(--color-light-grey)
+  }
+
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: var(--color-light-grey); 
+    cursor: pointer;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  .delete-btn:hover {
+    color: var(--color-liblack);  
+}
+
+  .move-btn {
+    background: none;
+    border: none;
+    color: var(--color-blue); 
+    cursor: pointer;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  .move-btn:hover {
+    background-color: var(--color-blue); 
+    color: var(--color-white);  
+}
+
+  .button-group {
+    display: flex;
+  }
+
+  .move-right {
+    margin-left: auto; 
+  }
+  .card_body {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  

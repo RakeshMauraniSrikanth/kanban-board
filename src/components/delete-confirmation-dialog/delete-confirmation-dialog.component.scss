@@ -1,0 +1,38 @@
+
+
+.mat-dialog-container {
+    width: 25%px; 
+    border-radius: 8px; 
+    padding: 16px; 
+  }
+  
+  
+  h2.mat-dialog-title {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .mat-dialog-content {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  
+  .mat-dialog-actions button {
+    border: 2px solid var(--color-grey); 
+    background-color: transparent;
+    color: var(--color-grey);   }
+
+    .mat-dialog-actions button:hover {
+        background-color: var(--color-blue); 
+        color:var(--color-white)
+      }
+  
+      

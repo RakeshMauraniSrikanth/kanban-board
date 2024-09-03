@@ -1,0 +1,84 @@
+.scrollable-columns {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow-x: auto; 
+  }
+  
+  .column {
+    width: 30%;
+    min-height: 300px; 
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    padding: 10px;
+    box-shadow: 0 4px 8px var(--color-black);
+    overflow-y: auto; 
+    
+  }
+  
+  .column .btn {
+    margin-bottom: 15px;
+  }
+  
+  .card {
+    padding-top: 18px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px var(--color-black);
+    margin-bottom: 10px;
+    cursor: pointer; 
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .card-text {
+    font-size: 1em;
+    color: var(--color-grey);
+  }
+  
+  .card .btn {
+    margin-top: 10px;
+  }
+
+  .fa-trash {
+    font-size: 16px;
+  }
+  
+  .btn{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;  
+  }
+
+  .btn-add {
+    background: none;
+    border: none;
+    color: var(--color-blue); 
+    cursor: pointer;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  .btn-add:hover {
+    background-color: var(--color-blue); 
+    color: var(--color-white);
+  }
+
+  .header-group {
+    display: flex;
+    justify-content: space-between; 
+  }

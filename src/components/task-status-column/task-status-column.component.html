@@ -1,0 +1,48 @@
+<div class="scrollable-columns">
+  <!-- 1st Column -->
+  <div class="column">
+    <div class="header-group">
+      <h4>{{ "taskStatusColumn.toDo" | translate }}</h4>
+      <button
+        class="btn-add"
+        (click)="addTaskForm()"
+        *ngIf="!showTaskForm"
+        matTooltip="{{ 'taskStatusColumn.addTask' | translate }}"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div *ngIf="showTaskForm">
+      <app-task-form (taskCreated)="onTaskCreated($event)"></app-task-form>
+    </div>
+    <app-card-task
+      *ngFor="let task of savedTasks; let i = index"
+      [task]="task"
+      (delete)="deleteTask(i)"
+      (moveToNext)="moveToNextColumn(task)"
+    ></app-card-task>
+  </div>
+
+  <!-- 2nd Column -->
+  <div class="column">
+    <h4>{{ "taskStatusColumn.implementing" | translate }}</h4>
+    <app-card-task
+      *ngFor="let task of secondColumnTasks; let i = index"
+      [task]="task"
+      (delete)="deleteTaskFromSecondColumn(i)"
+      (moveToNext)="moveTaskToNextColumn(task)"
+      (moveToPrevious)="moveToPreviousColumn(task)"
+    ></app-card-task>
+  </div>
+
+  <!-- 3rd Column -->
+  <div class="column">
+    <h4>{{ "taskStatusColumn.done" | translate }}</h4>
+    <app-card-task
+      *ngFor="let task of thirdColumnTasks; let i = index"
+      [task]="task"
+      (delete)="deleteTaskFromThirdColumn(i)"
+      (moveToPrevious)="moveTaskToPreviousColumn(task)"
+    ></app-card-task>
+  </div>
+</div>

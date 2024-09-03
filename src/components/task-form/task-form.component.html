@@ -1,0 +1,36 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
+  <div class="taskcard">
+    <div class="form-group">
+      <input
+        class="form-control"
+        id="name"
+        type="text"
+        formControlName="taskName"
+        placeholder="{{ 'taskForm.taskName' | translate }}"
+      />
+      <div *ngIf="hasError('taskName', 'required')" class="error-message">
+        {{ "taskForm.errors.required" | translate }}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input
+        class="form-control"
+        id="description"
+        type="text"
+        formControlName="taskDescription"
+        placeholder="{{ 'taskForm.taskDescription' | translate }}"
+      />
+
+      <div
+        *ngIf="hasError('taskDescription', 'required')"
+        class="error-message"
+      >
+        {{ "taskForm.errors.required" | translate }}
+      </div>
+    </div>
+    <button type="submit" class="createButton">
+      {{ "taskForm.createButton" | translate }}
+    </button>
+  </div>
+</form>
