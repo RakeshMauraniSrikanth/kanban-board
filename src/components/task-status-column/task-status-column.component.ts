@@ -17,7 +17,6 @@ import { MatTooltip } from '@angular/material/tooltip';
   styleUrl: './task-status-column.component.scss'
 })
 
-
 export class TaskStatusColumnComponent {
   showTaskForm:boolean = false;
   savedTasks:Task[] = [];
@@ -64,13 +63,9 @@ export class TaskStatusColumnComponent {
 
   moveTaskToNextColumn(task: Task) {
     const index = this.secondColumnTasks.indexOf(task);
-    console.log('Moving task to next column:', task, 'Index:', index);
-
     if (index >= 0) {
       this.secondColumnTasks.splice(index, 1);  
       this.thirdColumnTasks.push(task);  
-      console.log('Task moved to third column:', this.thirdColumnTasks);
-
     }
   }
 
