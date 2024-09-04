@@ -8,6 +8,7 @@
         "moveLeftToolTip": "Move left"
     },
     "taskForm": {
+        "taskHeader":"New Task",
         "taskName": "Enter Title",
         "taskDescription": "Enter description",
         "createButton": "Create Task",
