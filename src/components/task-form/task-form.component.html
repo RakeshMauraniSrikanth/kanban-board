@@ -1,5 +1,7 @@
 <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
   <div class="taskcard">
+    <h4 class="header">{{ "taskForm.taskHeader" | translate }}</h4>
+
     <div class="form-group">
       <input
         class="form-control"
